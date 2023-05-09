@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example</title>
+        <!-- This line includes the TouchFree tooling bundle - note the relative path to the tooling source. If copying this file, make sure the path to source is still correct. -->
+        <script name="TouchFree_Tooling" type="text/javascript" src="../dist/TouchFree_Tooling.js"></script>
+        <style>
+            body{
+                background-color: #161616;
+                color: white;
+            }
+
+            img {
+                height: 500px;
+                width: auto;
+            }
+
+            div {
+                position: relative;
+                text-align:center;
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <script>
+            // This is the only call required to initialise TouchFree tooling, getting a default cursor
+            TouchFree.Init();
+            fetch('http://192.168.1.1/modulation?mod=200.00&duty=0', {
+                method: 'GET'
+            }).then(() => {})
+                .catch(() => console.log('GET fehlgeschlagen... :('));
+        </script>
+        <div>
+            <img id="myImage" onclick="changeImage()" src="../assets/pic_bulboff.gif" width="100" height="180">
+
+            <p>Click the light bulb to turn on/off the light.</p>
+        </div>
+        <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("bulbon")) {
+                    image.src = "../assets/pic_bulboff.gif";
+                    fetch('http://192.168.1.1/modulation?mod=200.00&duty=0', {
+                        method: 'GET'
+                    }).then(() => {})
+                        .catch(() => console.log('GET fehlgeschlagen... :('));
+                } else {
+                    image.src = "../assets/pic_bulbon.gif";
+                    fetch('http://192.168.1.1/modulation?mod=200.00&duty=50', {
+                        method: 'GET'
+                    }).then(() => {})
+                        .catch(() => console.log('GET fehlgeschlagen... :('));
+                }
+            }
+        </script>
+    </body>
+</html>
