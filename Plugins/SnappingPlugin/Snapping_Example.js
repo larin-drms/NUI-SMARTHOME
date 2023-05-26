@@ -35,3 +35,24 @@ window.onload = function () {
     TouchFree.Plugins.InputActionManager.plugins[0].SetSnapDistance(25);
     TouchFree.Plugins.InputActionManager.plugins[0].SetSnapSoftness(0.3);
 };
+
+/*this part is from html file*/
+var changeText = function (content) {
+    var textToChange = document.getElementById("Text to change");
+    textToChange.textContent = content;
+};
+
+var resetText = function () {
+    var textToChange = document.getElementById("Text to change");
+    textToChange.textContent = "";
+}
+
+var resetTextColor = function () {
+    var textToChange = document.getElementById("Text to change");
+    textToChange.style.color = "black";
+}
+
+var textColor = function (content) {
+    var textToChange = document.getElementById("Text to change");
+    textToChange.style.color = content;
+}

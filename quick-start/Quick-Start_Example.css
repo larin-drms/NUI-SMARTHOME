@@ -1,0 +1,19 @@
+/*stylesheet*/
+
+body{
+    background-color: #161616;
+    color: white;
+}
+
+img {
+    height: 500px;
+    width: auto;
+}
+
+div {
+    position: relative;
+    text-align:center;
+    width: 100%;
+    height: 100%;
+}
+

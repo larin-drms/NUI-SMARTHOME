@@ -1,0 +1,44 @@
+/*stylesheet*/
+
+.buttonHorizontal {
+    text-align: center;
+    display: inline-block;
+    width: 25vw;
+    height: 10vw;
+}
+
+.buttonVertical {
+    text-align: center;
+    display: block;
+    width: 10vw;
+    height: 10vw;
+}
+
+.horizontalScroll {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 75vw;
+    height: 10vw;
+    position: relative;
+    left: 5vw;
+}
+
+.verticalScroll {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    width: 12vw;
+    height: 95vh;
+    position: relative;
+    left: 2.5vw;
+}
+
+.topButton {
+    position: absolute;
+    top: 0px;
+    right: 10vw;
+    width: 30vw;
+    height: 20vh;
+}

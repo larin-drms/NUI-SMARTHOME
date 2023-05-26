@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../User-Interface/user-interface.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script name="TouchFree_Tooling" type="text/javascript" src="../dist/TouchFree_Tooling.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../User-Interface/user-interface.js"></script>
+</head>
+
+<body>
+
+
+    <!--header container-->
+    <div class="container header vw-100">
+        <div class="row">
+
+            <!--logo-->
+            <div class="col-md-3 logo">
+                <img src="../../NUI-SMARTHOME/assets/logo-großeSchrift-gerastert.svg">
+            </div>
+
+            <!--time-->
+            <div class="col-md-6 time">
+                <div class="clock small_clock"></div>
+            </div>
+
+            <!--weather-->
+            <div class="col-md-3 weather">
+                <div id="weather-container">
+                    <div id="weather-icon"></div>
+                    <div id="weather-degree"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--main container-->
+    <div class="container  container-fluid vh-100 vw-100">
+        <div class="row">
+
+            <!--column left side-->
+            <div class="col-md-6 ">
+                <!--row time and date-->
+                <div class="row">
+                    <div class="col day">
+                        <div class="clock big_clock"></div>
+                        <div id="date"></div>
+                    </div>
+                </div>
+
+                <!--row presets-->
+                <div class="row presets_row">
+
+                        <!--preset1-->
+                        <div class="col-md-3 preset">
+                            <div class="preset_img_div">
+                                <img src="../../NUI-SMARTHOME/assets/icons/ic_fluent_lightbulb_24_regular.png" alt="My Icon">
+                            </div>
+                            <p class="text_preset">preset 1</p>
+                            <p class="text_mode">Presentation Mode</p>
+                        </div>
+
+                        <!--preset2-->
+                        <div class="col-md-3 preset">
+                            <div class="preset_img_div">
+                                <img src="../../NUI-SMARTHOME/assets/icons/ic_fluent_lightbulb_24_regular.png" alt="My Icon">
+                            </div>
+                            <p class="text_preset">preset 2</p>
+                            <p class="text_mode">Lecture Mode</p>
+                        </div>
+
+                         <!--preset3-->
+                        <div class="col-md-3 preset">
+                            <div class="preset_img_div">
+                                <img src="../../NUI-SMARTHOME/assets/icons/ic_fluent_lightbulb_24_regular.png" alt="My Icon">
+                            </div>
+                            <p class="text_preset">preset 3</p>
+                            <p class="text_mode">Study Mode</p>
+                        </div>
+                </div>
+            </div>
+
+            <!--vertical line-->
+            <div class="col-md-1">
+                <hr class="vertical-line">
+            </div>
+
+
+            <!--column right side-->
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col controls">
+                        <p>Lights</p>
+                        <div class="light_img_div">
+                            <img id="myImage" onclick="changeImage()" src="../../NUI-SMARTHOME/assets/icons/ic_fluent_lightbulb_24_regular.png" alt="My Icon">
+                            <span id="light-status">Off</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 controls">
+                        <p>Temperature</p>
+                    </div>
+                    <div class="col-md-6 controls">
+                        <p class="title_controls">Blinds</p>
+                        <div class="controls_content">
+                            <div  class="blinds" id="slider-vertical"></div>
+                        </div>
+                        <span id="percentage"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
